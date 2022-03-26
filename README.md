@@ -17,3 +17,11 @@ The VAE-Tacotron architecture is a simple Tacotron model with a VAE to encode Em
 
 - AutoVC
 The AutoVC architecture is a dual encoder decoder architecture for Voice Conversion. The model comprises of a style encoder and a content encoder. According to the paper, the when a speaker embedding is provided to an encoder with a controlled bottleneck width, the network learns to disentangle the speaker information from the sample for regeneration. The idea behind the content encoder bottleneck width is that, with a narrow bottleneck, the loss of information is high and with a wide bottleneck, the speaker information is still present in the sample. An appropriate width bottleneck effectively disentngles the speaker information from the sample.
+
+## Some tricks we use/d
+- Mixed Precision (Used)
+- Distributed Training (Used)
+- Guided Attention (Used)
+- μTransfer (in pipeline)
+- Temporal Convolutions instead of LSTM/GRU (in pipeline)
+- Diffusion models (in pipeline)
